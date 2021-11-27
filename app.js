@@ -1,7 +1,11 @@
-const express =require ('express');
 
-const app = express();
+const dotenv =require('dotenv').config();
 
-app.get('/', function(req, res){res.send('Hola Ricardo');});
+const Server=require('./server')
 
-app.listen(3000);
+const server= new Server;
+
+server.listen();
+
+
+
