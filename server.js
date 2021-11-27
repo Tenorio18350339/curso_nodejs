@@ -9,7 +9,7 @@ class Server{
     }
 
     routes(){
-        this.app.get('/', function(req, res){res.send('Hola Ingeniero');});
+        this.app.get('/', function(req, res){res.send('Hola Rick');});
     }
 
     listen (){
