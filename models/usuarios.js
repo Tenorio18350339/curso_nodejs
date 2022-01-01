@@ -1,21 +1,52 @@
 const usuariosQueries={
     insertUsuario: `
-    INSERT INTO(
-        usuarios(
-            nombre,
-            email,
-            password,
-            status,
-            )
-        VALUES
-            (?, ?, ?, ?)
+      INSERT INTO
+      usuarios(
+          nombre,
+          email,
+          password,
+          status
+      )
+      VALUES
+      (?, ?, ?, ?)
     `,
     selectUsuarios: `
-    SELECT
-    *
-    FROM
+      SELECT
+        *
+      FROM
         usuarios
+      WHERE
+        status = 1
+    `,
+    updateUsuario:`
+     UPDATE
+       usuarios
+     SET
+       nombre=?,
+       status=?
+     WHERE
+       emai=?
+
+    `,
+    deleteUsuario: `
+    UPDATE
+       usuarios
+    SET
+       status=0
     WHERE
-        status=1
-    `
-}
+       email=?
+    `,
+    getUsuarioByEmail: `
+    SELECT
+      *
+    FROM
+      usuarios
+    WHERE
+      email=?
+    AND
+      status=1
+    `,
+
+};
+
+module.exports= usuariosQueries;
