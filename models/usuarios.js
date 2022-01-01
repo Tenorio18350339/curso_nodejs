@@ -17,6 +17,8 @@ const usuariosQueries={
         usuarios
       WHERE
         status = 1
+      LIMIT
+        ?, ?
     `,
     updateUsuario:`
      UPDATE
@@ -46,7 +48,6 @@ const usuariosQueries={
     AND
       status=1
     `,
-
 };
 
 module.exports= usuariosQueries;

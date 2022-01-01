@@ -3,7 +3,8 @@ const{
     usuariosGET,
     usuariosPOST,
     usuariosPUT,
-    usuariosDELETE
+    usuariosDELETE,
+    usuarioSignin
 } = require("../controllers/usuarios");
 
 const router=Router();
@@ -13,7 +14,8 @@ const router=Router();
 router.get("/",usuariosGET);
 router.post("/",usuariosPOST);
 router.put("/",usuariosPUT);
-router.delete("/",usuariosDELETE); 
+router.delete("/",usuariosDELETE);
+router.post("/signin/",usuarioSignin);
 
 
 module.exports=router;
