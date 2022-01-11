@@ -5,7 +5,6 @@ const usuariosQueries=require("../models/usuarios");
 
 
 const usuariosGET=async(req=request, res=response)=>{
-    const{limit=5,desde=0}=req.query;
 
     let {limite = 5, desde = 0} =req.query;
 
